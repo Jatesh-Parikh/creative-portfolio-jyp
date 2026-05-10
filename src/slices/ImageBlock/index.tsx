@@ -1,5 +1,6 @@
-import { FC } from "react";
+import Bounded from "@/components/Bounded";
 import { Content } from "@prismicio/client";
+import { PrismicNextImage } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
 
 /**
@@ -10,21 +11,12 @@ export type ImageBlockProps = SliceComponentProps<Content.ImageBlockSlice>;
 /**
  * Component for "ImageBlock" Slices.
  */
-const ImageBlock: FC<ImageBlockProps> = ({ slice }) => {
+const ImageBlock = ({ slice }: ImageBlockProps): JSX.Element => {
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
-      Placeholder component for image_block (variation: {slice.variation})
-      slices.
-      <br />
-      <strong>You can edit this slice directly in your code editor.</strong>
-      {/**
-       * 💡 Use the Prismic MCP server with your code editor
-       * 📚 Docs: https://prismic.io/docs/ai#code-with-prismics-mcp-server
-       */}
-    </section>
+    <PrismicNextImage 
+      field={slice.primary.image}
+      className="not-prose w-full h-full rounded-md my-10 md:my-14 lg:my-16"
+    />
   );
 };
 
