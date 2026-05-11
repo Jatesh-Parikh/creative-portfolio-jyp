@@ -2,7 +2,7 @@
 
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
-import { ContactShadows, Float, Environment } from "@react-three/drei";
+import { ContactShadows, Float } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
@@ -25,7 +25,8 @@ export function Shapes() {
                         blur={1}
                         far={9}
                     />
-                    <Environment preset="studio" />
+                    <ambientLight intensity={1} />
+                    <directionalLight position={[5, 5, 5]} intensity={2} />
                 </Suspense>
             </Canvas>
         </div>
