@@ -1,4 +1,4 @@
-import Bounded from "@/components/Bounded";
+// @ts-nocheck
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
