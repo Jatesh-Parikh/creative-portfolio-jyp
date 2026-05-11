@@ -1791,7 +1791,7 @@ export interface BlogPostIndexSliceDefaultPrimary {
    * - **API ID Path**: blog_post_index.primary.content_type
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_type: prismic.SelectField<"Blogs" | "Projects", "filled">;
+  content_type: prismic.SelectField<"Blogs" | "Projects" | "Book", "filled">;
 
   /**
    * Description field in *ContentIndex → Primary*
